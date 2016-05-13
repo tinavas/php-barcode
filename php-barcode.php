@@ -142,7 +142,8 @@ class Barcode {
                     }
                     $x1 = $x * $mw;
                     $y1 = $y * $mh;
-                    $x2 = ($z + 1) * $mw;
+                    // Fixed width 1 error by civenz@qq.com
+                    $x2 = ($z + 1) * $mw - 1;
                     $y2 = ($y + 1) * $mh;
                     self::_rotate($x1, $y1, $cos, $sin, $xA, $yA);
                     self::_rotate($x2, $y1, $cos, $sin, $xB, $yB);
